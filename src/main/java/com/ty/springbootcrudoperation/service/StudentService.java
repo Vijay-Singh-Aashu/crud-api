@@ -26,7 +26,7 @@ public class StudentService {
 		
 		if(student2!=null) {
 			responseStructure.setStatusCode(HttpStatus.CREATED.value());
-			responseStructure.setMsg("successfully created");
+			responseStructure.setMsg("successfully Created");
 			responseStructure.setData(student2);
 		}
 		return responseStructure;
@@ -40,11 +40,11 @@ public class StudentService {
 		
 		if(list.get(0)!=null) {
 			responseStructure.setStatusCode(HttpStatus.FOUND.value());
-			responseStructure.setMsg("student is  present");
+			responseStructure.setMsg("Student is  present");
 			responseStructure.setData(list);
 		}
 		else {
-			throw new IdNotFoundException("data is not present in db");
+			throw new IdNotFoundException("Data is not present in db");
 		}
 		
 		return responseStructure;
